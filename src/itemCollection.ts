@@ -14,4 +14,8 @@ export class ItemCollection {
     public printDetails():void {
         this.Items.forEach((item:TodoItem)=>item.printDetail());
     }
+    public taskDone(taskId:number) {
+        let item:TodoItem = this.Items.find((item)=>item.id === taskId)
+        item.complete = true;
+    }
 }
