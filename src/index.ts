@@ -1,8 +1,11 @@
-import { TodoItem } from "./todoitem";
-
+import { ItemCollection } from "./itemCollection";
 console.clear();
 
-let item1 : TodoItem = new TodoItem(1,'Purchase Mongo',false);
-let item2 : TodoItem = new TodoItem(2,'Eat Biryani',false);
-item1.printDetail();
-item2.printDetail();
+let col1:ItemCollection = new ItemCollection();
+
+
+col1.addTodo('Purachase Mongo');
+col1.addTodo('Eat Biryani');
+col1.addTodo('Tikka');
+
+col1.printDetails();

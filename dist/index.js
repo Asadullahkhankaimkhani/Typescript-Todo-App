@@ -1,8 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const todoitem_1 = require("./todoitem");
+const itemCollection_1 = require("./itemCollection");
 console.clear();
-let item1 = new todoitem_1.TodoItem(1, 'Purchase Mongo', false);
-let item2 = new todoitem_1.TodoItem(2, 'Eat Biryani', false);
-item1.printDetail();
-item2.printDetail();
+let col1 = new itemCollection_1.ItemCollection();
+col1.addTodo('Purachase Mongo');
+col1.addTodo('Eat Biryani');
+col1.addTodo('Tikka');
+col1.printDetails();
