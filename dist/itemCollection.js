@@ -6,11 +6,13 @@ class ItemCollection {
     constructor(Items = []) {
         this.Items = Items;
         this.nextId = 1;
+        this.itemMap = new Map();
     }
     addTodo(task) {
         let item = new todoitem_1.TodoItem(this.nextId, task, false);
         this.nextId++;
         this.Items.push(item);
+        this.itemMap.set(this.nextId, new todoitem_1.TodoItem(this.nextId, task));
     }
     printDetails() {
         this.Items.forEach((item) => item.printDetail());

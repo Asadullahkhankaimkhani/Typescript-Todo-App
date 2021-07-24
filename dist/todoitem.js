@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TodoItem = void 0;
 class TodoItem {
-    constructor(id, task, complete) {
+    constructor(id, task, complete = true) {
         this.id = id;
         this.task = task;
         this.complete = complete;
